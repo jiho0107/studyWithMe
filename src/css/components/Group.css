@@ -1,0 +1,25 @@
+.Group {
+    display: flex;
+    gap: 15px;
+    font-family: Hakgyoansim;
+    font-size: 20px;
+    width: 550px;
+    border-bottom: 1px solid rgb(236,236,236);
+}
+
+.Group .id_section {
+    width: 10%;
+}
+.Group .title_section {
+    width: 70%;
+}
+.Group .isProgress_section {
+    width: 20%;
+}
+
+.isProgress_section_true {
+    color: red;
+}
+.isProgress_section_false {
+    color: blue;
+}

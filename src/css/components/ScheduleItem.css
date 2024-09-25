@@ -1,0 +1,18 @@
+.ScheduleItem {
+    display: flex;
+    gap: 15px;
+    font-family: Hakgyoansim;
+    font-size: 20px;
+    width: 550px;
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(236,236,236);
+}
+
+.ScheduleItem .id_section {
+    width: 15%;
+}
+.ScheduleItem .title_section {
+    width: 85%;
+}
+

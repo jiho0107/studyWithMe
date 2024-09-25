@@ -1,0 +1,29 @@
+.GroupNotices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.GroupNotices .info_section {
+    display: flex;
+    width: 550px;
+    flex: 1;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.GroupNotices .info_section .progress_true {
+    color: red;
+}
+.GroupNotices .info_section .progress_false {
+    color: blue;
+}
+
+.GroupNotices .button_section {
+    display: flex;
+    width: 550px;
+    justify-content: space-between;
+    padding: 0 80px; /*양쪽 화면과 버튼 사이의 간격 조정 */
+    margin-top: 20px;
+}

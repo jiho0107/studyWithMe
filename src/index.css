@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "GowunBatang";
+    src: url("/GowunBatang-Regular.ttf");
+}
+@font-face {
+    font-family: "Hakgyoansim";
+    src: url("/Hakgyoansim Badasseugi TTF L.ttf");
+}
+@font-face {
+    font-family: "HSSantokki";
+    src: url("/HSSantokki-Regular.ttf");
+}
+
+body * {
+    font-family: GowunBatang;
+}
+
+html, body {
+    margin: 0px;
+    width: 100%;
+    background-color: rgb(246,246,246);
+}
+
+#root {
+    background-color: white;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    height: 100%;
+}

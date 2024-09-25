@@ -1,0 +1,43 @@
+.Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Main .menu_section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.Main .menu_section > h2 {
+    font-family: HSSantokki;
+    font-size: 35px;
+    color: rgb(152,235,230);
+    line-height: 1;
+    text-align: center;
+}
+
+.Main .list_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0 auto;
+}
+
+.Main .button_section {
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+.Main .list_section .list_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}

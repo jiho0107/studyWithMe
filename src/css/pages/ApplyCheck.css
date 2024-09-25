@@ -1,0 +1,80 @@
+.ApplyCheck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.ApplyCheck .content_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 550px;
+}
+
+.ApplyCheck h2 {
+    font-size: 22px;
+}
+
+.ApplyCheck .content_section .title h2 {
+    text-align: left;
+}
+
+.ApplyCheck .content_section .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ApplyCheck .content_section .content h2 {
+    margin-top: 2px; 
+    padding-top: 0; 
+    margin-bottom: 2px;
+}
+
+.ApplyCheck .content_section .content textarea {
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    resize: none;
+    box-sizing: border-box;
+    border: 1px solid rgb(236,236,236);
+
+    font-family: Hakgyoansim;
+    font-size: 20px;
+    margin-top: 0;
+
+    box-sizing: border-box;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+
+    cursor: default; /* 기본 커서(화살표)로 설정 */
+    pointer-events: none; /* 클릭 이벤트 차단 */
+}
+
+.ApplyCheck .apply_section h2 {
+    margin-top: 2px; 
+    padding-top: 0; 
+    margin-bottom: 2px;
+}
+
+.ApplyCheck .apply_section .apply_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.ApplyCheck .button_section {
+    display: flex;
+    /* flex: 1; */
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-bottom: 5px;
+    gap: 30px;
+}

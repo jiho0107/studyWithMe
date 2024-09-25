@@ -1,0 +1,25 @@
+.MyPosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.MyPosts .list_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.MyPosts .button_section {
+    display: flex; 
+    justify-content: left; 
+    align-items: center;
+    width: 550px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+

@@ -1,0 +1,38 @@
+.Login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.Login .logo_section {
+    font-family: HSSantokki;
+    font-size: 70px;
+    margin-top: 100px;
+}
+
+.Login .input_section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgb(236,236,236);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.Login .button_section {
+    /* margin-top: 80px; */
+    margin-bottom: 10px;
+}
+
+.Login .input_section input {
+    border: 2px solid rgb(236,236,236);
+    border-radius: 5px;
+    font-size: 24px;
+
+    height: fit-content;
+    flex: 1;
+}
+

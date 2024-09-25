@@ -1,0 +1,35 @@
+.NewSchedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.NewSchedule .input_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 550px;
+
+    gap: 5px;
+}
+
+.NewSchedule .input_section div {
+    display: flex;
+    flex: 1;
+}
+
+.NewSchedule .input_section h2 {
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.NewSchedule .button_section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px; /* 양쪽 화면과 버튼 사이의 간격 조정 */
+    margin-top: 20px;
+    width: 550px;
+}

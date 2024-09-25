@@ -1,0 +1,15 @@
+.StudyRoom .title_section {
+    padding-top: 20px;
+}
+
+.StudyRoom .list_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.StudyRoom .button_section {
+    padding-left: 60px;
+    margin-top: 20px;
+}

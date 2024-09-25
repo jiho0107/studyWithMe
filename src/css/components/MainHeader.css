@@ -1,0 +1,10 @@
+.MainHeader {
+    display: flex;
+    justify-content: center;
+    font-family: HSSantokki;
+    font-size: 42px;
+    border-bottom: 2px solid rgb(236,236,236);
+    margin: 0 auto;
+    width: 550px;
+    padding: 5px;
+}

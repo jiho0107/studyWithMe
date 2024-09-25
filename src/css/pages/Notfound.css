@@ -1,0 +1,15 @@
+.Notfound > h1 {
+    color: red;
+}
+
+.Notfound .img {
+    width: 50%;
+    margin-top: 100px;
+}
+
+.Notfound {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}

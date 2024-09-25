@@ -1,0 +1,10 @@
+.Header {
+    font-size: 42px;
+    border-bottom: 2px solid rgb(236,236,236);
+    width: 550px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    margin: 0 auto;
+}

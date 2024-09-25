@@ -1,0 +1,15 @@
+.RectangleBox, .RectangleBox_readOnly {
+    border: 2px solid rgb(236,236,236);
+    font-family: Hakgyoansim;
+    font-size: 20px;
+    text-align: left;
+    align-items: center;
+    padding: 7px;
+    
+    width: 450px;
+}
+
+.RectangleBox_readOnly {
+    cursor: default; /* 기본 커서(화살표)로 설정 */
+    pointer-events: none; /* 클릭 이벤트 차단 */
+}

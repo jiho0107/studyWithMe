@@ -1,0 +1,18 @@
+.ScheduleManage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ScheduleManage .title_section {
+    padding-top: 20px;
+}
+
+.ScheduleManage .button_section {
+    display: flex; /* flexbox를 사용 */
+    justify-content: space-between; /* 버튼을 왼쪽 정렬 */
+    width: 550px;
+    padding: 0 80px;
+    margin-top: 20px;
+}

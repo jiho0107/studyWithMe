@@ -1,0 +1,19 @@
+.MyGroupNotice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MyGroupNotice .title_section {
+    padding-top: 20px;
+}
+
+.MyGroupNotice .button_section {
+    display: flex; /* flexbox를 사용 */
+    justify-content: flex-start; /* 버튼을 왼쪽 정렬 */
+    width: 100%; /* 부모 요소의 전체 너비를 사용 */
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+}

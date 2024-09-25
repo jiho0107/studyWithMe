@@ -1,0 +1,50 @@
+.MyPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.MyPage .title_section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.MyPage .menu_section {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    padding-right: 70px;
+}
+
+.MyPage .user_section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 500px;
+    gap: 20px;
+}
+
+.MyPage .user_section > img {
+    width: 25%;
+}
+
+.MyPage .user_section .greeting {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: 1px solid rgb(236,236,236);
+    flex: 1;
+    padding-left: 20px;
+}
+
+.MyPage .blank {
+    height: 100px;
+}
+
+.MyPage .button_section {
+    display: flex;
+    justify-content: left;
+    margin-left: 30px;
+}

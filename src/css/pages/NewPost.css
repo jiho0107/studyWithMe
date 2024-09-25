@@ -1,0 +1,78 @@
+.NewPost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.NewPost .title_section {
+    display: flex;
+    justify-content: center;
+}
+
+.NewPost .input_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 550px;
+}
+
+.NewPost .input_section .title {
+    display: flex;
+    flex: 1;
+}
+
+.NewPost .input_section .title > h2 {
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.NewPost .input_section .content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.NewPost .input_section .content > h2 {
+    font-size: 22px;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.NewPost .button_section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px; /* 양쪽 화면과 버튼 사이의 간격 조정 */
+
+    margin-top: 20px;
+}
+
+.NewPost .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.NewPost .input_section .post_title {
+    font-family: Hakgyoansim;
+    font-size: 20px;
+}
+
+.NewPost .content > textarea {
+    padding: 20px;
+    width: 100%;
+    height: 300px;
+    resize: none;
+    box-sizing: border-box;
+    border: 1px solid rgb(236,236,236);
+
+    font-family: Hakgyoansim;
+    font-size: 20px;
+    margin-top: 0;
+
+    box-sizing: border-box;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
