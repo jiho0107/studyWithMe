@@ -1,12 +1,13 @@
 import "../css/components/RectangleBox.css";
 
-const RectangleBox = ({text, readOnly=false}) => {
+const RectangleBox = ({text, readOnly=false, onChange}) => {
     if(!readOnly){
         return (
             <input 
                 className="RectangleBox" 
                 type="text"
                 value={text}
+                onChange={onChange}
                 required />
         )
     }
