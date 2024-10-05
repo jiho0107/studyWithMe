@@ -1,8 +1,8 @@
 import "../css/components/Menu.css";
 
-const Menu = ({text}) => {
+const Menu = ({text, onClick}) => {
     return (
-        <h4 className="Menu">{text}</h4>
+        <h4 className="Menu" onClick={onClick}>{text}</h4>
     )
 }
 

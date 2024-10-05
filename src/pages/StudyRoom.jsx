@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const StudyRoom = () => {
     // postItem 리스트로 렌더링해야함
+    
     const nav = useNavigate();
 
     return (
@@ -17,9 +18,9 @@ const StudyRoom = () => {
             <section className="list_section">
                 <List3Menu t1={"No"} t2={"그룹"} t3={"그룹 진행"} />
                 <div className="list_wrapper">
-                    <PostItem id={1} title={"앱1"} isProgress={true} />
+                    {/* <PostItem id={1} title={"앱1"} isProgress={true} />
                     <PostItem id={2} title={"앱2"} isProgress={false} />
-                    <PostItem id={3} title={"앱3"} isProgress={null} />
+                    <PostItem id={3} title={"앱3"} isProgress={null} /> */}
                 </div>
             </section>
             <section className="button_section">
