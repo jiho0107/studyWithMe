@@ -1,14 +1,19 @@
 import "../css/components/RectangleBox.css";
 
-const RectangleBox = ({text, readOnly=false, onChange}) => {
+const RectangleBox = ({text, readOnly=false, onChangeInput, name}) => {
     if(!readOnly){
+        const onChange = (e) => {
+            onChangeInput(e)
+        }
         return (
             <input 
                 className="RectangleBox" 
                 type="text"
                 value={text}
                 onChange={onChange}
-                required />
+                required
+                name={name}
+            />
         )
     }
     // readOnly 인 경우
@@ -18,7 +23,8 @@ const RectangleBox = ({text, readOnly=false, onChange}) => {
             type="text"
             value={text} 
             readOnly
-            required/>
+            required
+        />
     )
 }
 

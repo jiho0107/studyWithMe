@@ -26,7 +26,7 @@ const NewPost = () => {
 
     const onSubmit = () => {
         console.log("onSubmit진입: input - ", input);
-        // save();
+        save();
     }
 
     const save = async () => { // 게시글 저장
@@ -50,12 +50,6 @@ const NewPost = () => {
         } catch(error){
             // 게시글 저장 실패
             console.log("게시글 저장 실패: ", error);
-            if(error.request){
-                console.log("error request: ", error.request);
-            }
-            if(error.response){
-                console.log("error response: ", error.response);
-            }
         }
     }
 
@@ -67,12 +61,7 @@ const NewPost = () => {
             <section className="input_section">
                 <div className="title">
                     <h2>제목</h2>
-                    <RenctangleBox className="post_title" onChange={(e)=>onChangeInput({
-                        target: {
-                            name: "title",
-                            value: input.content
-                        }
-                    })} />
+                    <RenctangleBox className="post_title" name="title" text={input.title} onChangeInput={onChangeInput} />
                 </div>
                 <div className="content">
                     <h2>내용</h2>
