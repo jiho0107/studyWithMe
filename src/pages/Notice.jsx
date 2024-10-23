@@ -1,43 +1,96 @@
 import "../css/pages/Notice.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import RectangleBox from "../components/RectangleBox";
 import Button from "../components/Button";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import getWriter from "../util/getLoginIdById";
 
 const Notice = () => {
-    // 공지사항id를 이용해 그룹,작성자,제목,내용을 받아와야 함
     const nav = useNavigate();
+    const noticeId = useParams().id; // 공지사항id
 
-    const params = useParams(); // 공지사항id를 파라미터로 받음
-    const NoticeId = params.id; // 공지사항id
+    const [notice,setNotice] = useState({
+        id:"",
+        title:"",
+        content:"",
+        groupId:"",
+        memberId:""
+    });
 
-    const group = "g1"; // 임시
-    const writer = "w1"; // 임시
-    const title = "test 캘린더 앱 개발"; // 임시
-    const content = "내용입니다"; // 임시
+    const findNotice = async () => {
+        try{
+            const {data, status} = await axios.get(`/api/notices/${noticeId}`);
+            if(status === 200){
+                console.log("findNotice : ",data);
+                const writer = await getWriter(data.memberId);
+                const group = await findGroup(data.groupId);
+                const post = await findPost(group.postId);
+                setNotice({
+                    ...data,
+                    ["writer"]:writer?writer.loginId:null,
+                    ["groupName"]:post?post.title:null
+                });
+            }
+        }catch(error){
+            console.log("findNotice오류 : ",error);
+        }
+    }
+
+    const findGroup = async (groupId) => {
+        try{
+            const {data,status} = await axios.get(`/api/groups/${groupId}`);
+            if(status===200){
+                console.log("findGroup:",data);
+                return data;
+            }
+        }catch(error){
+            console.log("findGroup오류: ",error);
+        }
+    }
+
+    const findPost = async (postId) => {
+        try{
+            const {data,status} = await axios.get(`/api/posts/${postId}`);
+            if(status ===200){
+                console.log("findPost:",data);
+                return data;
+            }
+        }catch(error){
+            console.log("findPost오류: ",error);
+        }
+    }
+
+    useEffect(()=>{
+        findNotice();
+    },[])
+
+    if(!notice) {
+        return (<div>loading...</div>)
+    }
 
     return (
         <div className="Notice">
             <section className="title_section">
-                <Header title={title} />
+                <Header title={notice.title} />
             </section>
             <section className="content_section">
                 <div className="group">
                     <h2>그룹</h2>
-                    <RectangleBox text={group} readOnly={true} />
+                    <RectangleBox text={notice.groupName} readOnly={true} />
                 </div>
                 <div className="writer">
                     <h2>작성자</h2>
-                    <RectangleBox text={writer} readOnly={true} />
+                    <RectangleBox text={notice.writer} readOnly={true} />
                 </div>
                 <div className="title">
                     <h2>제목</h2>
-                    <RectangleBox text={title} readOnly={true} />
+                    <RectangleBox text={notice.title} readOnly={true} />
                 </div>
                 <div className="content">
                     <h2>내용</h2>
-                    <textarea readOnly>{content}</textarea>
+                    <textarea readOnly value={notice.content}></textarea>
                 </div>
             </section>
             <section className="button_section">

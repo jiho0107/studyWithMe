@@ -1,47 +1,68 @@
-.GroupSchedule {
-    display: flex;
+ /* .GroupSchedule { */
+    /* display: flex; */
     /* gap: 15px; */
+    /* font-family: Hakgyoansim; */
+    /* font-size: 20px; */
+    /* width: 550px; */
+    /* border-bottom: 1px solid rgb(236,236,236); */
+
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+    /* height: 50px; */
+    /* cursor: pointer; */
+/* }  */
+
+/* .GroupSchedule .isGroup_section { */
+    /* width: 10%; */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+    /* display: flex; */
+/* } */
+/* .GroupSchedule .title_section { */
+    /* width: 70%; */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* display: flex; */
+
+    /* padding-top: 2px; */
+/* } */
+/* .GroupSchedule .isProgress_section { */
+    /* width: 20%; */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* display: flex; */
+/* } */
+/* .GroupSchedule .blank { */
+    /* width: 20%; */
+/* } */
+
+/* .isProgress_section_true { */
+    /* color: red; */
+/* } */
+/* .isProgress_section_false { */
+    /* color: blue; */
+/* }*/
+
+.ScheduleItem {
+    display: flex;
+    gap: 15px;
     font-family: Hakgyoansim;
     font-size: 20px;
     width: 550px;
+    text-align: center;
+    align-items: center;
     border-bottom: 1px solid rgb(236,236,236);
-
-    justify-content: center;
-    align-items: center;
-    
-    height: 50px;
+    cursor: pointer;
 }
 
-.GroupSchedule .isGroup_section {
-    width: 10%;
-    align-items: center;
-    justify-content: center;
-
-    display: flex;
+.ScheduleItem .type_section {
+    width: 15%;
 }
-.GroupSchedule .title_section {
-    width: 70%;
-    justify-content: center;
-    align-items: center;
-
-    display: flex;
-
-    padding-top: 2px;
-}
-.GroupSchedule .isProgress_section {
-    width: 20%;
-    justify-content: center;
-    align-items: center;
-
-    display: flex;
-}
-.GroupSchedule .blank {
-    width: 20%;
+.ScheduleItem .title_section {
+    width: 85%;
 }
 
-.isProgress_section_true {
-    color: red;
-}
-.isProgress_section_false {
-    color: blue;
-}

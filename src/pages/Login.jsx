@@ -73,7 +73,7 @@ const Login = () => {
                 // 로그인한 회원을 web storage에 저장
                 sessionStorage.setItem("loginMember",JSON.stringify(data));
 
-                nav('/main');  // 메인 페이지로 이동
+                nav('/main',{replace:true});  // 메인 페이지로 이동
             } 
         } catch(error){ 
             // 로그인 실패 시

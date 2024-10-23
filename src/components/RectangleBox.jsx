@@ -1,6 +1,7 @@
 import "../css/components/RectangleBox.css";
 
-const RectangleBox = ({text, readOnly=false, onChangeInput, name}) => {
+const RectangleBox = ({text, readOnly=false, onChangeInput, name, type="text"}) => {
+    //readOnly 아닌 경우
     if(!readOnly){
         const onChange = (e) => {
             onChangeInput(e)
@@ -8,7 +9,7 @@ const RectangleBox = ({text, readOnly=false, onChangeInput, name}) => {
         return (
             <input 
                 className="RectangleBox" 
-                type="text"
+                type={type}
                 value={text}
                 onChange={onChange}
                 required
@@ -20,8 +21,8 @@ const RectangleBox = ({text, readOnly=false, onChangeInput, name}) => {
     return (
         <input 
             className="RectangleBox_readOnly" 
-            type="text"
-            value={text} 
+            type={type}
+            value={text||""} 
             readOnly
             required
         />

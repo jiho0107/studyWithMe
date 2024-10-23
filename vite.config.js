@@ -24,6 +24,10 @@ export default defineConfig({
         target: 'http://localhost:8087',
         changeOrigin: true,
       },
+      '/member': {
+        target: 'http://localhost:8087',
+        changeOrigin: true,
+      },
     },
   },
 })

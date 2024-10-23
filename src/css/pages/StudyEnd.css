@@ -56,3 +56,43 @@
     padding: 0 80px; /* 양쪽 화면과 버튼 사이의 간격 조정 */
     margin-top: 20px;
 }
+
+
+
+
+/* p 태그와 ul 태그를 가로로 배치하는 부모 요소에 Flexbox 적용 */
+.StudyEnd .img_section .members_section {
+    display: flex;            /* Flexbox 적용으로 자식들을 가로로 배치 */
+    align-items: center;      /* 세로 방향으로 중앙 정렬 */
+    flex-direction: column;
+}
+
+/* ul 태그는 이미 가로로 배치되고 있음 */
+.StudyEnd .img_section .members_section ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* p 태그와 ul 태그 사이에 간격 추가 */
+.StudyEnd .img_section .members_section p {
+    margin-right: 10px;      /* p 태그와 ul 사이에 간격 */
+}
+
+/* li 요소들에 대한 스타일 (이미 설정된 스타일 유지) */
+.StudyEnd .img_section .members_section ul li {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 25px;
+    color: rgba(255,255,255,1);
+    white-space: normal;  /* 텍스트가 길 경우 줄바꿈 허용 */
+}
+
+/* 마지막 li 요소는 margin-right 제거 */
+.StudyEnd .img_section .members_section ul li:last-child {
+    margin-right: 0;
+}
+
+

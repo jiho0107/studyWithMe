@@ -22,8 +22,6 @@ import MyGroupSchedules from './pages/MyGroupSchedules';
 import NewSchedule from './pages/NewSchedule';
 import Schedule from './pages/Schedule';
 
-// import React, {lazy, Suspense} from "react";
-// const main = lazy(()=>import("./pages/Main"));
 
 export const StateContext = createContext();
 export const DispatchContext = createContext();
@@ -67,10 +65,10 @@ function App() {
             <Route path='/post/:id' element={<Post />} />
             <Route path='/newPost' element={<NewPost />} />
             <Route path='/posts' element={<MyPosts />} />
-            <Route path='/applyCheck' element={<ApplyCheck />} />
+            <Route path='/applyCheck/:id' element={<ApplyCheck />} />
             <Route path='/studyRoom' element={<StudyRoom />} />
             <Route path='/studyEnd/:id' element={<StudyEnd />} />
-            <Route path='/newNotice' element={<NewNotice />} />
+            <Route path='/newNotice/:id' element={<NewNotice />} />
             <Route path='/notices' element={<MyGroupNotice />} />
             <Route path='/notices/:id' element={<GroupNotices />} />
             <Route path='/notice/:id' element={<Notice />} />

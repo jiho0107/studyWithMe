@@ -12,6 +12,11 @@ const MyPage = () => {
 
     const {loginMember} = useContext(StateContext);
 
+    // loginMember가 존재하는지 확인 후 렌더링
+    if (!loginMember) {
+        return <p>loading...</p>; // loginMember가 undefined일 경우 로딩 메시지 표시
+    }
+    
     return (
         <div className="MyPage">
             <section className="title_section">

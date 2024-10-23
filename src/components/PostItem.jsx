@@ -1,13 +1,16 @@
 import "../css/components/PostItem.css";
+import { useNavigate } from "react-router-dom";
 
 // null반환하면 아무것도 렌더링 하지 않음
 
-const PostItem = ({id, title, writer, isProgress}) => {
+const PostItem = ({id, title, member, isProgress, onClick}) => {
+    const nav = useNavigate();
+
     return (
-        <div className="PostItem">
+        <div className="PostItem" onClick={onClick}>
             <div className="id_section_">{id}</div>
             <div className="title_section_">{title}</div>
-            {writer && <div className="writer_section_">{writer}</div>}
+            {member && <div className="memberId_section_">{member}</div>}
             {/* {isProgress && <div className="progress_section">{isProgress}</div>} */}
 
             {/* {isProgress !== null && isProgress !== undefined ? (

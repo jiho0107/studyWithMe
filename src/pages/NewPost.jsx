@@ -3,15 +3,18 @@ import Header from "../components/Header";
 import RenctangleBox from "../components/RectangleBox";
 import Button from "../components/Button"
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { StateContext } from "../App";
 import axios from "axios";
 
 const NewPost = () => {
     const nav = useNavigate();
+    const {loginMember} = useContext(StateContext);
 
     const [input, setInput] = useState({
         title:"",
-        content:""
+        content:"",
+        memberId:loginMember
     });
 
     const onChangeInput = (e) => {
@@ -25,7 +28,6 @@ const NewPost = () => {
     }
 
     const onSubmit = () => {
-        console.log("onSubmit진입: input - ", input);
         save();
     }
 

@@ -8,10 +8,9 @@ import { useContext, useEffect, useState } from "react";
 import {StateContext} from "../App";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import getWriter from "../util/getLoginIdById";
 
 const Main = () => {
-    // const [isLoading, setIsLoading] = useState(true);
-
     const [posts, setPosts] = useState(); // 모든 게시글들
     const nav = useNavigate();
 
@@ -37,22 +36,44 @@ const Main = () => {
         }
     }
 
-
     const getAllPosts = async () => { // 모든 게시글들 불러오기
         try{
-            const {data} = await axios.get("/api/posts");
-            console.log("axios - getAllPosts: ", data);
-            setPosts(data);
-            // setIsLoading(false);
+            const {data,status} = await axios.get("/api/posts");
+            if(status === 200){
+                console.log("axios - getAllPosts: ", data);
+                const postsWithWriters = await Promise.all(
+                    data.data.map(async (post)=>{
+                        const writer = await getWriter(post.memberId);
+                        console.log("### writer: ");
+                        return {
+                            ...post,
+                            ["writer"]:writer?writer.loginId:null
+                        }
+                    })
+                );
+                setPosts(postsWithWriters);
+            }        
         } catch(error){
             console.log("getAllPosts 에러: ",error);
         }
     }
+    
+    // const getWriter = async (memberId) => {
+    //     try{
+    //         const {data,status} = await axios.get(`/member/${memberId}`);
+    //         if(status === 200){
+    //             console.log("getWriter: ", data);
+    //             return data;
+    //         }
+    //     } catch(error){
+    //         console.log("getWriter 에러: ",error);
+    //     }
+    // }
 
     useEffect(()=>{
         getAllPosts();
     },[])
-    
+
     return(
         <div className="Main">
             <section className="menu_section">
@@ -67,15 +88,20 @@ const Main = () => {
                 
                 <List3Menu t1={"NO"} t2={"제목"} t3={"작성자"} />
                 <div className="list_wrapper">
-                    {/* {posts === undefined ? ( 
-                        <p>게시글을 불러오는 중입니다...</p>
-                    ) : (posts.length > 0 ? ( 
-                        posts.map((post) => (
-                            <PostItem key={post.id} {...post} />
-                        ))
-                    ) : (
-                        <p>게시글이 없습니다.</p> 
-                    ))} */}
+                    {posts === undefined ? 
+                        <p>loading...</p> :
+                        console.log(posts)
+                    }
+                    {posts === undefined ? 
+                        <p>loading...</p> : 
+                        posts.map((post) => 
+                        <PostItem 
+                        key={post.id} 
+                        id={post.id} 
+                        title={post.title} 
+                        member={post.writer} 
+                        onClick={()=>nav(`/post/${post.id}`)} />)
+                    }
 
                     {/* <PostItem id={1} title={"test1"} writer={"w1"} />
                     <PostItem id={2} title={"test2"} writer={"w2"} /> */}
